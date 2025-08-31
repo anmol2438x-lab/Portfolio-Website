@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+   <center>
+     <div class="login-header-box"> <h1>LOGIN PSGE</h1> </div>
+      <header>
+        <div> <h3>LOGIN YOUR ACCOUNT</h3> </div>
+      </header><div>
+      <form action="Portfolio.html" method="get" onsubmit="return validateForm()">
+         <br>
+         <input type="text" id="username" placeholder="Users Name......">
+         <br><br>
+         <input type="password" id="password" placeholder="Password......">
+         <br><br>
+         <button style="background-color: rgb(51, 50, 53);" onclick="alert('Please contact support!')">Forget</button>
+         <button style="background-color: blue; color: white;" type="submit">Login</button></form></div>
+      </form>
+   </center>
+   <script>
+      function validateForm() {
+         var username = document.getElementById("username").value;
+         var password = document.getElementById("password").value;
+         if (username === "" || password === "") {
+            alert("Please enter both username and password.");
+            return false;
+         }
+         // Example: check for specific username and password
+         if (username !== "admin" || password !== "1234") {
+            alert("Invalid username or password!");
+            return false;
+         }
+         return true;
+      }
+   </script>
+   <script>
+      // Optional: Redirect to Portfolio.html after successful login
+      document.querySelector("form").addEventListener("submit", function(event) {
+         event.preventDefault(); // Prevent default form submission
+         if (validateForm()) {
+            window.location.href = "Portfolio.html"; // Redirect to Portfolio page
+         }
+      });
+   </script>
+   <script>// ...existing code...
+      function validateForm() {
+         var username = document.getElementById("username").value;
+         var password = document.getElementById("password").value;
+         if (username === "" || password === "") {
+            alert("Please enter both username and password.");
+            return false;
+         }
+         // Set your own username and password here
+         if (username !== "Anmol Kumar" || password !== "AKsingh") {
+            alert("Invalid username or password!");
+            return false;
+         }
+         return true;
+      }
+// ...existing code...</script>
+</body>
+</html>
